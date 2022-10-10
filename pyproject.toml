@@ -1,17 +1,17 @@
 [tool.poetry]
 name = "pooch-cli"
-version = "0.1.1"
+version = "0.1.2"
 description = "Command-line interface for Pooch"
 authors = ["Danilo Horta <danilo.horta@pm.me>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "pooch_cli"}]
+packages = [{ include = "pooch_cli" }]
 
 [tool.poetry.dependencies]
 pooch = "*"
 python = "^3.8"
 tqdm = "*"
-typer = "*"
+typer = { version = "*", extras = ["all"] }
 
 [tool.poetry.group.dev.dependencies]
 black = "*"
