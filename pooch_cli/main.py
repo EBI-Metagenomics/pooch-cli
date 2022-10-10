@@ -56,15 +56,9 @@ def dl(
 ):
     if filename is not None:
         filename = os.path.basename(filename)
-    typer.echo(f"Download: {url}")
-    typer.echo(f"known_hash: {hash}")
-    typer.echo(f"fname: {filename}")
-    typer.echo(f"path: {cachedir}")
-    typer.echo(f"progressbar: {progress}")
     filepath = pooch.retrieve(
         url=url, known_hash=hash, fname=filename, path=cachedir, progressbar=progress
     )
-    typer.echo(f"filepath: {filepath}")
     if filename is None:
         filename = os.path.basename(filepath).split("-", 1)[1]
 
